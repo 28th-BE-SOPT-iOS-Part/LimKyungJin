@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+      
     }
     
     @IBAction func loginClicked(_ sender: Any) {
@@ -35,13 +35,21 @@ class LoginViewController: UIViewController {
         
         guard let finalVC = self.storyboard?.instantiateViewController(identifier: "FinishSignUpViewController")as? FinishSignUpViewController else { return }
         
+        
+        
         //move on to the final view only if both fields are entered correctly
         if emailphoneTextField.hasText && pwTextField.hasText {
             finalVC.contactInfo = emailphoneTextField.text
+            //just to practice using transition & presentation style
+            finalVC.modalTransitionStyle = .crossDissolve
+            finalVC.modalPresentationStyle = .currentContext
             
             self.present(finalVC, animated: true, completion: nil)
+            
         } else {
             //when the expected fields are not entered
+            //error message is printed: TIAnalyticsEventSpec with name 'thirdPartyKeyboards' is already registered.
+            //not sure how to solve such error
             self.present(alert, animated:true, completion: nil)
         }
 
@@ -53,11 +61,6 @@ class LoginViewController: UIViewController {
         guard let signupVC =
                 self.storyboard?.instantiateViewController(identifier: "SignUpViewController")as? SignUpViewController else{return}
         
-        /*
-        guard let checkVC =
-                self.storyboard?.instantiateViewController(identifier: "FinishSignUpViewController")as? FinishSignUpViewController else{return}*/
-        
-        //add it to the navigation stack
         self.navigationController?
             .pushViewController(signupVC, animated: true)
         

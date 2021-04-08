@@ -12,8 +12,11 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        
     }
+    
+
     @IBOutlet weak var contactTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var retypeTextField: UITextField!
@@ -31,9 +34,24 @@ class SignUpViewController: UIViewController {
         if contactTextField.hasText && pwTextField.hasText && retypeTextField.hasText {
             nextVC.contactInfo = contactTextField.text
             self.present(nextVC, animated:true, completion: nil)
+            nextVC.modalTransitionStyle = .crossDissolve
+            nextVC.modalPresentationStyle = .currentContext
+        
         } else {
             self.present(alert, animated:true, completion: nil)
         }
+    }
+    
+    //tried to call this function to go back to the rootView
+    //function is called, but it doesn't go back to rootView
+
+    @IBAction func returnHome(){
+        
+         guard let prevVC =  self.storyboard?.instantiateViewController(identifier: "LoginViewController")as?LoginViewController else {return}
+        
+        self.navigationController?.popToViewController(prevVC, animated: true)
+        
+        
     }
     
     /*
