@@ -30,11 +30,9 @@ class LoginViewController: UIViewController {
         
         //set default action in the alert
         let defaultAction = UIAlertAction(title: "입력창 돌아가기", style: .destructive, handler: nil)
-        
         alert.addAction(defaultAction)
         
         guard let finalVC = self.storyboard?.instantiateViewController(identifier: "FinishSignUpViewController")as? FinishSignUpViewController else { return }
-        
         
         
         //move on to the final view only if both fields are entered correctly
@@ -48,9 +46,10 @@ class LoginViewController: UIViewController {
             
         } else {
             //when the expected fields are not entered
-            //error message is printed: TIAnalyticsEventSpec with name 'thirdPartyKeyboards' is already registered.
-            //not sure how to solve such error
+            //not sure how to solve this warning:  while an existing transition or presentation is occurring; the navigation stack will not be updated.
+            //program still runs
             self.present(alert, animated:true, completion: nil)
+            
         }
 
     }
@@ -61,6 +60,7 @@ class LoginViewController: UIViewController {
         guard let signupVC =
                 self.storyboard?.instantiateViewController(identifier: "SignUpViewController")as? SignUpViewController else{return}
         
+        //moves to SignupViewController
         self.navigationController?
             .pushViewController(signupVC, animated: true)
         

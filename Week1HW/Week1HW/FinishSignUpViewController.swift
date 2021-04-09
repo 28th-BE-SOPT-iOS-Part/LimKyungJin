@@ -22,9 +22,10 @@ class FinishSignUpViewController: UIViewController {
         
     }
     
+   //첫번째 뷰로 돌아가는 시도 
    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("뷰가 사라졌습니다")
+        //print("뷰가 사라졌습니다")
         
         guard let signupVC =
                 self.storyboard?.instantiateViewController(identifier: "SignUpViewController")as? SignUpViewController else{return}
@@ -53,21 +54,17 @@ class FinishSignUpViewController: UIViewController {
         signupVC.navigationController?
             .popToRootViewController(animated: true)
  
-        
-        //add it to the navigation stack
-        /*self.navigationController?
-            .dismiss(animated: true, completion: nil)*/
+               
         guard let pvc = self.presentingViewController else { return }
 
         pvc.dismiss(animated: true) {
-            //방법1: singupVC 안에 선언한 returnHome() 함수를 호출하여 Login VC로 돌아간다
+            //방법1: singupVC 안에 선언한 returnHome() 함수를 호출하여 Login VC로 돌아가기
             //signupVC.returnHome()
             
             //방법2: navigationController의 popToRoot 사용
             signupVC.navigationController?
                 .popToRootViewController(animated: true)
             
-            //둘 다 작동하지 않음 --> SignUpViewController에서 수동으로 back button 눌러야함
         }
         
         
