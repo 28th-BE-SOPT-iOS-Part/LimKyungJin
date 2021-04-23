@@ -60,7 +60,7 @@
 		E8D216CF261A162100EA490C = {
 			isa = PBXGroup;
 			children = (
-				E8D216DA261A162100EA490C /* Week1HW */,
+				E8D216DA261A162100EA490C /* Week2HW */,
 				E8D216D9261A162100EA490C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +73,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E8D216DA261A162100EA490C /* Week1HW */ = {
+		E8D216DA261A162100EA490C /* Week2HW */ = {
 			isa = PBXGroup;
 			children = (
 				E8D216DB261A162100EA490C /* AppDelegate.swift */,
@@ -94,7 +94,7 @@
 				E8D216FC261A1EC800EA490C /* FinishSignUpViewController.swift */,
 				E8424B6626316E3D00927B9D /* HomeViewController.swift */,
 			);
-			path = Week1HW;
+			path = Week2HW;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E8D216D3261A162100EA490C /* Build configuration list for PBXProject "Week1HW" */;
+			buildConfigurationList = E8D216D3261A162100EA490C /* Build configuration list for PBXProject "Week2HW" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -362,7 +362,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E8D216D3261A162100EA490C /* Build configuration list for PBXProject "Week1HW" */ = {
+		E8D216D3261A162100EA490C /* Build configuration list for PBXProject "Week2HW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8D216EA261A162300EA490C /* Debug */,
