@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="BZi-7H-feP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="person.3" catalog="system" id="Aws-c1-Y5q"/>
+                    <tabBarItem key="tabBarItem" title="" image="messageTabIcon" id="Aws-c1-Y5q"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDh-py-u4L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -27,7 +27,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="messageTabIcon" width="20.5" height="19.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

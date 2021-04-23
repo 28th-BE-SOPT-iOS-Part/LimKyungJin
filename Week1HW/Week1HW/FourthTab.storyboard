@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="bXb-1U-wmG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="bag" catalog="system" landscapeImage="tray.2.fill" id="OYT-qx-Xuz"/>
+                    <tabBarItem key="tabBarItem" title="" image="shopTabIcon" landscapeImage="tray.2.fill" catalog="system" id="OYT-qx-Xuz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYa-f4-Nmc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -27,7 +27,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="shopTabIcon" width="19.5" height="19"/>
         <image name="tray.2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
