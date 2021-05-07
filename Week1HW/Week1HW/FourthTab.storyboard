@@ -27,7 +27,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="shopTabIcon" width="19.5" height="19"/>
+        <image name="shopTabIcon" width="128" height="128"/>
         <image name="tray.2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

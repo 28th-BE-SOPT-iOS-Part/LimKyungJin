@@ -9,12 +9,27 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    
+    @IBOutlet weak var profileName: UILabel!
+    @IBOutlet weak var profilePicture: UIImageView!
+    
+    var name : String?
+    var image : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setProfile()
         // Do any additional setup after loading the view.
     }
-    
+    func setProfile() {
+        if let myName = self.name {
+            profileName.text = myName
+        }
+        
+        if let myPicture = self.image {
+            profilePicture.image = UIImage(named: myPicture)
+        }
+    }
     @IBAction func dismissClicked(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)

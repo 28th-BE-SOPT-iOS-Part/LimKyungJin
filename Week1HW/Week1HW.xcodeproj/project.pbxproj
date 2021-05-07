@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E81E82662645263F00282E14 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E82652645263F00282E14 /* TableViewCell.swift */; };
+		E81E826926452F5400282E14 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E826826452F5400282E14 /* TableViewController.swift */; };
+		E81E826D2645319000282E14 /* friendsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E826C2645319000282E14 /* friendsDataModel.swift */; };
+		E81E82702645642D00282E14 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E826F2645642D00282E14 /* CollectionViewCell.swift */; };
+		E81E82732645664E00282E14 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E82722645664E00282E14 /* CollectionViewController.swift */; };
+		E81E82762645688C00282E14 /* CellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E82752645688B00282E14 /* CellDataModel.swift */; };
 		E8424B6726316E3D00927B9D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8424B6626316E3D00927B9D /* HomeViewController.swift */; };
 		E8424B732631D91600927B9D /* SecondTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8424B722631D91600927B9D /* SecondTab.storyboard */; };
 		E8424B762631D97000927B9D /* ThirdTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8424B752631D97000927B9D /* ThirdTab.storyboard */; };
@@ -26,6 +32,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E81E82652645263F00282E14 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		E81E826826452F5400282E14 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		E81E826C2645319000282E14 /* friendsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendsDataModel.swift; sourceTree = "<group>"; };
+		E81E826F2645642D00282E14 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		E81E82722645664E00282E14 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		E81E82752645688B00282E14 /* CellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDataModel.swift; sourceTree = "<group>"; };
 		E8424B6626316E3D00927B9D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E8424B722631D91600927B9D /* SecondTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondTab.storyboard; sourceTree = "<group>"; };
 		E8424B752631D97000927B9D /* ThirdTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdTab.storyboard; sourceTree = "<group>"; };
@@ -76,16 +88,21 @@
 		E8D216DA261A162100EA490C /* Week1HW */ = {
 			isa = PBXGroup;
 			children = (
+				E81E82652645263F00282E14 /* TableViewCell.swift */,
 				E8D216DB261A162100EA490C /* AppDelegate.swift */,
 				E8D216DD261A162100EA490C /* SceneDelegate.swift */,
 				E8D216DF261A162100EA490C /* ViewController.swift */,
 				E8D216E1261A162100EA490C /* Main.storyboard */,
 				E8424B862631F96300927B9D /* FriendViewController.swift */,
+				E81E826C2645319000282E14 /* friendsDataModel.swift */,
 				E8424B832631F8D900927B9D /* ProfileViewController.swift */,
 				E8424B722631D91600927B9D /* SecondTab.storyboard */,
 				E8424B752631D97000927B9D /* ThirdTab.storyboard */,
 				E8424B782631D9A700927B9D /* FourthTab.storyboard */,
 				E8424B7F2631E7A600927B9D /* FifthTab.storyboard */,
+				E81E82722645664E00282E14 /* CollectionViewController.swift */,
+				E81E82752645688B00282E14 /* CellDataModel.swift */,
+				E81E826F2645642D00282E14 /* CollectionViewCell.swift */,
 				E8D216E4261A162300EA490C /* Assets.xcassets */,
 				E8D216E6261A162300EA490C /* LaunchScreen.storyboard */,
 				E8D216E9261A162300EA490C /* Info.plist */,
@@ -93,6 +110,7 @@
 				E8E06184261F15EC00369C5C /* SignUpViewController.swift */,
 				E8D216FC261A1EC800EA490C /* FinishSignUpViewController.swift */,
 				E8424B6626316E3D00927B9D /* HomeViewController.swift */,
+				E81E826826452F5400282E14 /* TableViewController.swift */,
 			);
 			path = Week1HW;
 			sourceTree = "<group>";
@@ -174,8 +192,14 @@
 				E8E06185261F15EC00369C5C /* SignUpViewController.swift in Sources */,
 				E8D216E0261A162100EA490C /* ViewController.swift in Sources */,
 				E8D216FD261A1EC800EA490C /* FinishSignUpViewController.swift in Sources */,
+				E81E826D2645319000282E14 /* friendsDataModel.swift in Sources */,
+				E81E82732645664E00282E14 /* CollectionViewController.swift in Sources */,
 				E8D216DC261A162100EA490C /* AppDelegate.swift in Sources */,
 				E8D216F9261A1E9D00EA490C /* LoginViewController.swift in Sources */,
+				E81E82662645263F00282E14 /* TableViewCell.swift in Sources */,
+				E81E82762645688C00282E14 /* CellDataModel.swift in Sources */,
+				E81E826926452F5400282E14 /* TableViewController.swift in Sources */,
+				E81E82702645642D00282E14 /* CollectionViewCell.swift in Sources */,
 				E8424B6726316E3D00927B9D /* HomeViewController.swift in Sources */,
 				E8424B872631F96300927B9D /* FriendViewController.swift in Sources */,
 				E8424B842631F8D900927B9D /* ProfileViewController.swift in Sources */,
