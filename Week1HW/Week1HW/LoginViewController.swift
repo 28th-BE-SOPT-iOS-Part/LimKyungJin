@@ -27,42 +27,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginClicked(_ sender: Any) {
         
-        //alert to notify empty input
-        let alert = UIAlertController(title: "알림", message: "이메일/전화번호와 비밀번호를 모두 입력해주세요!", preferredStyle: UIAlertController.Style.alert)
-        
-        //set default action in the alert
-        let defaultAction = UIAlertAction(title: "입력창 돌아가기", style: .destructive, handler: nil)
-        alert.addAction(defaultAction)
-        
-        /*guard let tabVC = self.storyboard?.instantiateViewController(identifier: "TabBar")as? UITableViewController else { return }*/
-       
-
-     
-        
-        
-        
-        //move on to the final view only if both fields are entered correctly
-        if emailphoneTextField.hasText && pwTextField.hasText {
-            
-            //tabVC.contactInfo = emailphoneTextField.text
-            //just to practice using transition & presentation style*/
-           
-            /*tabVC.modalTransitionStyle = .crossDissolve
-            tabVC.modalPresentationStyle = .currentContext
-            
-            
-            
-            
-            self.present(tabVC, animated: true, completion: nil)
-            */
-        } else {
-            //when the expected fields are not entered
-            //not sure how to solve this warning:  while an existing transition or presentation is occurring; the navigation stack will not be updated.
-            //program still runs
-            self.present(alert, animated:true, completion: nil)
-            
-        }
-
+        self.makeRequestAlert(title: "알림",
+                                    message: "로그인을 하시겠습니까?",
+                                    okAction: { _ in
+                                      self.loginAction()
+                                    })
     }
     
     @IBAction func signupClicked(_ sender: Any) {
@@ -78,15 +47,46 @@ class LoginViewController: UIViewController {
         
     }
     
+    func changeView()
+        {
+        guard let friendVC = self.storyboard?.instantiateViewController(identifier: "FriendViewController")as? FriendViewController else{return}
+        friendVC.modalPresentationStyle = .fullScreen
+        self.present(friendVC, animated: true)
+        }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    func loginAction()
+        {
+            LoginService.shared.login(email: self.emailphoneTextField.text!, password: self.pwTextField.text!) { result in
+                switch result
+                {
+                case .success(let message):
+                    
+                    if let message = message as? String{
+                        
+                        self.makeAlert(title: "알림",
+                                       message: message, okAction: { _ in
+                                        self.changeView()})
+                        
+                    }
+                    /*guard let friendVC = self.storyboard?.instantiateViewController(identifier: "FriendViewController")as? FriendViewController else{return}
+                    self.present(friendVC, animated: true)*/
+                    
+                case .requestErr(let message):
+                    
+                    if let message = message as? String{
+                        
+                        self.makeAlert(title: "알림",
+                                  message: message)
+                    }
+                               
+                    
+                default :
+                    print("ERROR")
+                }
+            }
+        }
+    
+    
+   
 
 }
