@@ -6,7 +6,7 @@
 |  Week 1      | iOS 기초 H.I.G를 통한 컴포넌트의 이해, 화면 전환  | 🌱 |
 |  Week 2     |  View, Autolayout, ScrollView    | 🌱 |
 |  Week 3 |  데이터 전달, TableView, CollectionView    | 과제1,2,3🌱    |
-|  Week 4 |  Networking    |  🌱    |
+|  Week 4 |  Networking    |  🌱  [📚](../main/Notes/NETWORK.md)  |
 |  Week 5 |  디자인 합동세미나    |     |
 |  Week 6 |  서버 합동세미나    |     |
 |  Week 7 |  UI, Animation, Interaction    |     |
